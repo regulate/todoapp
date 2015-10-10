@@ -21,12 +21,15 @@ public class XStreamXmlRepository implements Repository<Record> {
 
 	private static final String XML_ROOT = "<records></records>";
 
-	private static final String XML_REPO_PATH = "data/records.xml";
+	private static final String DIR_REPO_PATH = "data";
+	
+	private static final String XML_REPO_PATH = DIR_REPO_PATH+"/records.xml";
 
 	private XStream xStream;
 
 	public XStreamXmlRepository(HierarchicalStreamDriver hsd) {
 		setupXStream(hsd);
+		createDestDir(DIR_REPO_PATH);
 	}
 
 	private void setupXStream(HierarchicalStreamDriver hsd) {
@@ -41,6 +44,13 @@ public class XStreamXmlRepository implements Repository<Record> {
 	private boolean destinationUnitExists(String path) {
 		File repo = new File(path);
 		return repo.exists() && !repo.isDirectory();
+	}
+	
+	private void createDestDir(String path) {
+		File repoDir = new File(path);
+		if(!repoDir.exists()){
+			repoDir.mkdir();
+		}
 	}
 
 	@Override
