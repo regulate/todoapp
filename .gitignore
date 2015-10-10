@@ -1,0 +1,36 @@
+# Directories #
+build/
+bin/
+target/
+lib/
+data/
+
+*.class
+ 
+# Package Files #
+*.jar
+*.war
+*.ear
+*.db
+
+# Eclipse
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PDT-specific
+.buildpath
