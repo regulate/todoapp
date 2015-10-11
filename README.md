@@ -6,4 +6,4 @@ Simple terminal TODO list application.
  - clone this repo
  - go inside cloned repo, start terminal and type "mvn package"
  - then, go inside generated "target" dir and find "todoapp-{version}" directory (todoapp-1.0, for example)
- - start the terminal inside todoapp-{version} directory and type "java -jar todoapp-{version}.jar"
+ - start the terminal from todoapp-{version} directory and type "java -jar todoapp-{version}.jar"
